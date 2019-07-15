@@ -77,5 +77,5 @@ xmlhttp.onreadystatechange = function() {
         }
     }
 };
-xmlhttp.open("GET", "../content/tutorials/test.json", true);
+xmlhttp.open("GET", "test.json", true);
 xmlhttp.send();
