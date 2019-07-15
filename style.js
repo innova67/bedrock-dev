@@ -17,11 +17,13 @@ tipsButton.addEventListener("mouseout", mouseOutTips);
 var imgTips = document.getElementById("img-tips");
 var gifTips = document.getElementById("gif-tips");
 
-
+try{
 function mouseOverDoc() {
   imgDoc.style.display = "none";
   gifDoc.style.display = "block";
 }
+}
+catch (e){}
 function mouseOutDoc() {
   gifDoc.style.display = "none";
   imgDoc.style.display = "block";
