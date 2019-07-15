@@ -69,5 +69,5 @@ xmlhttp.onreadystatechange = function() {
         }
     }
 };
-xmlhttp.open("GET", "content/tutorials/test.json", true);
+xmlhttp.open("GET", "content/tutorials/test.txt", true);
 xmlhttp.send();
