@@ -19,3 +19,5 @@ https://innova67.github.io/bedrock-dev/
 - [ ] tips and tricks page with:
   - [ ] automated content update
   - [ ] automated content page generation
+  
+### check the content syntax on the content/tutorials/test.json
