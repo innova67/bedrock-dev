@@ -46,6 +46,7 @@ footer {
   display: inline-block;
   border: 2px solid var(--creeper);
   padding: 20px 40px;
+  margin-bottom: 20px;
   color: #000000;
   font-weight: 700;
   text-transform: uppercase;
