@@ -13,6 +13,7 @@
 .code{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(174, 200, 212);
+    padding: 10px;
 }
 
 #toFill{
