@@ -12,7 +12,7 @@
 
             {"img":{ "url":"https://i.imr.com/pkA03Yx.jpg?1", "alt": "this image failed lol" }},
 
-            {"code": "{\n*miencraft:health*:{\n*value*:2\n}\n}"},
+            {"code": "{<br>\"miencraft:health\":{<br>\"value\":2<br>}<br>}"},
 
             {"w": "don't try this code at home"},
 
