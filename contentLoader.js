@@ -62,7 +62,10 @@ xmlhttp.onreadystatechange = function() {
             else if( Object.keys(myObj.content[i]) == "code"){
                 var newCode = document.createElement("p");
                 newCode.className = "code";
-                var newtext = document.createTextNode(myObj.content[i].code.toString());
+                var newtext = document.createTextNode(myObj.content[i].code);
+                console.log(myObj.content[i].code);
+                console.log(myObj.content[i].code.toString());
+                console.log(Object.keys(myObj.content[i].code));
                 newCode.appendChild(newtext);
                 doc.appendChild(newCode);
                 console.log("code loaded");
