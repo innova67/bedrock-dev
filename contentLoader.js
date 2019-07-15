@@ -26,7 +26,7 @@ xmlhttp.onreadystatechange = function() {
         /* looking for different types of content */
         for(i=0; i<myObj.content.length; i++){
             console.log(i);
-            console.log(myObj.content[i].valueOf);
+            console.log(myObj.content[i].valueOf());
         }
     }
 };
