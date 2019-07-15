@@ -26,7 +26,50 @@ xmlhttp.onreadystatechange = function() {
         /* looking for different types of content */
         for(i=0; i<myObj.content.length; i++){
             console.log(i);
-            console.log(Object.keys(myObj.content[i]));
+            /**
+             * basic function:
+             * first creates the desired element
+             * then creates a text holder to collect the text
+             * puts the text into the element
+             * puts the element into the final page
+             */
+
+            /* paragraphs */
+            if( Object.keys(myObj.content[i]) == "p"){
+                var newpara = document.createElement("p");
+                var newtext = document.createTextNode(myObj.content[i].p);
+                newpara.appendChild(newtext);
+                doc.appendChild(newpara);
+                console.log("paragraph loaded");
+            }
+            /* images */
+            else if( Object.keys(myObj.content[i]) == "img"){
+                var newImg = document.createElement("img");
+                newImg.src = myObj.content[i].img.url;
+                newImg.alt = myObj.content[i].img.alt;
+                doc.appendChild(newImg);
+                console.log("image loaded");
+            }
+            /* warning */
+            else if( Object.keys(myObj.content[i]) == "w"){
+                var newWarn = document.createElement("p");
+                newWarn.className = "warning";
+                var newtext = document.createTextNode(myObj.content[i].w);
+                newWarn.appendChild(newtext);
+                doc.appendChild(newWarn);
+                console.log("warning loaded");
+            }
+            else if( Object.keys(myObj.content[i]) == "code"){
+                var newCode = document.createElement("p");
+                newCode.className = "code";
+                var newtext = document.createTextNode(myObj.content[i].code);
+                newCode.appendChild(newtext);
+                doc.appendChild(newCode);
+                console.log("code loaded");
+            }
+            else{
+                console.log("something very strange is happening here :O")
+            }
         }
     }
 };
