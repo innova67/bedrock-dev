@@ -19,3 +19,13 @@
 #toFill{
     color: white;
 }
+
+.common-img{
+    max-width: 70%;
+}
+
+@media screen and (max-width:767px) {
+    .common-img{
+        max-width: 100%;
+    }
+  }
