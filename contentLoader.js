@@ -49,6 +49,7 @@ xmlhttp.onreadystatechange = function() {
             /* images */
             else if( Object.keys(myObj.content[i]) == "img"){
                 var newImg = document.createElement("img");
+                newImg.className = "common-img";
                 newImg.src = myObj.content[i].img.url;
                 newImg.alt = myObj.content[i].img.alt;
                 doc.appendChild(newImg);
