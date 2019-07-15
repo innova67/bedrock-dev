@@ -13,20 +13,10 @@
             </div>
             <div class="container" id="fillButtons">
                     <a class="btn" id="btn-tuto" href="#" >test how long can this botton be</a>
-                    <p id="demo"></p>
+                    <a class="btn" href="#" id="newpage">new page</a>
+                    <p id="toFill"></p>
             </div>
-            
-            <script src="../style.js"></script>
-            <script>
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    var myObj = JSON.parse(this.responseText);
-                    document.getElementById("demo").innerHTML = myObj.name;
-                }
-                };
-                xmlhttp.open("GET", "../content/tutorials/jsonTest.txt", true);
-                xmlhttp.send();
-            </script>
+            <script src="../contentLoader.js"></script>
+
     </body>
 </html>
