@@ -24,7 +24,7 @@ xmlhttp.onreadystatechange = function() {
         doc.innerHTML = myObj.title;
         
         /* looking for different types of content */
-        for(i=0; i<myObj.length; i++){
+        for(i=0; i<myObj.content.length; i++){
 
             /**
              * basic function:
@@ -35,31 +35,31 @@ xmlhttp.onreadystatechange = function() {
              */
 
             /* paragraphs */
-            if( myObj[i] == "p"){
+            if( myObj.content[i] == "p"){
                 var newpara = document.createElement("p");
-                var newtext = document.createTextNode(myObj[i].p);
+                var newtext = document.createTextNode(myObj.content[i].p);
                 newpara.appendChild(newtext);
                 doc.appendChild(newpara);
             }
             /* images */
-            else if( myObj[i] == "img"){
+            else if( myObj.content[i] == "img"){
                 var newImg = document.createElement("img");
-                newImg.src = myObj[i].img.url;
-                newImg.alt = myObj[i].img.alt;
+                newImg.src = myObj.content[i].img.url;
+                newImg.alt = myObj.content[i].img.alt;
                 doc.appendChild(newImg);
             }
             /* warning */
-            else if( myObj[i] == "w"){
+            else if( myObj.content[i] == "w"){
                 var newWarn = document.createElement("p");
                 newWarn.className = "warning";
-                var newtext = document.createTextNode(myObj[i].w);
+                var newtext = document.createTextNode(myObj.content[i].w);
                 newWarn.appendChild(newtext);
                 doc.appendChild(newWarn);
             }
-            else if( myObj[i] == "code"){
+            else if( myObj.content[i] == "code"){
                 var newCode = document.createElement("p");
                 newCode.className = "code";
-                var newtext = document.createTextNode(myObj[i].code);
+                var newtext = document.createTextNode(myObj.content[i].code);
                 newCode.appendChild(newtext);
                 doc.appendChild(newCode);
             }
@@ -69,5 +69,5 @@ xmlhttp.onreadystatechange = function() {
         }
     }
 };
-xmlhttp.open("GET", "../content/tutorials/test.txt", true);
+xmlhttp.open("GET", "../content/tutorials/test.json", true);
 xmlhttp.send();
