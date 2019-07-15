@@ -35,28 +35,28 @@ xmlhttp.onreadystatechange = function() {
              */
 
             /* paragraphs */
-            if( myObj.content[i] == p){
+            if( myObj.content[i] == myObj.content[i].p){
                 var newpara = document.createElement("p");
                 var newtext = document.createTextNode(myObj.content[i].p);
                 newpara.appendChild(newtext);
                 doc.appendChild(newpara);
             }
             /* images */
-            else if( myObj.content[i] == img){
+            else if( myObj.content[i] == myObj.content[i].img){
                 var newImg = document.createElement("img");
                 newImg.src = myObj.content[i].img.url;
                 newImg.alt = myObj.content[i].img.alt;
                 doc.appendChild(newImg);
             }
             /* warning */
-            else if( myObj.content[i] == w){
+            else if( myObj.content[i] == myObj.content[i].w){
                 var newWarn = document.createElement("p");
                 newWarn.className = "warning";
                 var newtext = document.createTextNode(myObj.content[i].w);
                 newWarn.appendChild(newtext);
                 doc.appendChild(newWarn);
             }
-            else if( myObj.content[i] == code){
+            else if( myObj.content[i] == myObj.content[i].code){
                 var newCode = document.createElement("p");
                 newCode.className = "code";
                 var newtext = document.createTextNode(myObj.content[i].code);
