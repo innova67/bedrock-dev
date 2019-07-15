@@ -1,6 +1,7 @@
 var container = document.getElementById("fillButtons")
 
 /* new page test */
+/*
 var btnNew = document.getElementById("newpage")
 btnNew.addEventListener("click",createPage);
 
@@ -8,6 +9,7 @@ function createPage(){
     var opened = window.open("");
     opened.document.write("<html><head><title>MyTitle</title></head><body>test</body></html>");
 }
+*/
 
 console.log("im here bitch")
 
@@ -20,10 +22,12 @@ xmlhttp.onreadystatechange = function() {
         var myObj = JSON.parse(this.responseText);
 
         /* adding title */
-        var doc = document.getElementById("toFill")
-        doc.innerHTML = myObj.title;
-        
+        var tit = document.getElementById("tutorial-title")
+        tit.innerHTML = myObj.title;
+
         /* looking for different types of content */
+        var doc = document.getElementById("toFill")
+
         for(i=0; i<myObj.content.length; i++){
             console.log(i);
             /**
