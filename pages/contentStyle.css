@@ -1,0 +1,16 @@
+/* styles destinated only to the subpages generated */
+
+.title{
+    color: white;
+    font-size: 3em;
+}
+
+.warning{
+    color: red;
+    background-color:rgba(133, 176, 216, 0.438);
+}
+
+.code{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(174, 200, 212);
+}

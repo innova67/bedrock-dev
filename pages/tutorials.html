@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="contentStyle.css">
+        <title>tutorials</title>
+    </head>
+    <body>
+            <div class="banner">
+                <h1 class="title">TUTORIALS</h1>
+            </div>
+            <div class="container" id="fillButtons">
+                    <a class="btn" id="btn-tuto" href="#" >test how long can this botton be</a>
+                    <p id="demo"></p>
+            </div>
+            
+            <script src="../style.js"></script>
+            <script>
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myObj = JSON.parse(this.responseText);
+                    document.getElementById("demo").innerHTML = myObj.name;
+                }
+                };
+                xmlhttp.open("GET", "../json_demo.txt", true);
+                xmlhttp.send();
+            </script>
+    </body>
+</html>
