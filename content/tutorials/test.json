@@ -1,5 +1,4 @@
 {
-    "identifier":"how to test a test",
     "title": "this is just a bad test",
     "content":[
             { "p":"imagine this is a first paragraph" },
@@ -16,6 +15,17 @@
 
             {"w": "don't try this code at home"},
 
-            {"p": "that's all folks!"}
+            {"p": "that's all folks!"},
+
+            {"p": "good damn i need to sleep (T_T)"}
     ]
+/*
+p = paragraph
+img = image
+w = warning paragraph
+code = a creeper in your face what do you think this could be
+
+stuff to add:
+vid = youtube video viewer
+*/
 }
