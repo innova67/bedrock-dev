@@ -69,5 +69,5 @@ xmlhttp.onreadystatechange = function() {
         }
     }
 };
-xmlhttp.open("GET", "test.txt", true);
+xmlhttp.open("GET", "../test.txt", true);
 xmlhttp.send();
