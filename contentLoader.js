@@ -1,7 +1,7 @@
-var container = document.getElementById("fillButtons")
 
 /* new page test */
 /*
+var container = document.getElementById("fillButtons")
 var btnNew = document.getElementById("newpage")
 btnNew.addEventListener("click",createPage);
 
@@ -21,22 +21,26 @@ xmlhttp.onreadystatechange = function() {
         /* converting the json into an object */
         var myObj = JSON.parse(this.responseText);
 
+        /* adding page title */
+        var tit = document.getElementById("identifier")
+        tit.innerHTML = myObj.identifier;
+
         /* adding title */
         var tit = document.getElementById("tutorial-title")
         tit.innerHTML = myObj.title;
-
-        /* looking for different types of content */
+        
+        /* looking for the common container for all the generated stuff */
         var doc = document.getElementById("toFill")
 
+        /**
+         * basic function:
+         * first creates the desired element
+         * then creates a text holder to collect the text
+         * puts the text into the element
+         * puts the element into the final page
+         */
         for(i=0; i<myObj.content.length; i++){
             console.log(i);
-            /**
-             * basic function:
-             * first creates the desired element
-             * then creates a text holder to collect the text
-             * puts the text into the element
-             * puts the element into the final page
-             */
 
             /* paragraphs */
             if( Object.keys(myObj.content[i]) == "p"){
@@ -64,6 +68,7 @@ xmlhttp.onreadystatechange = function() {
                 doc.appendChild(newWarn);
                 console.log("warning loaded");
             }
+            /* block code */
             else if( Object.keys(myObj.content[i]) == "code"){
                 var newCode = document.createElement("p");
                 newCode.className = "code";
@@ -72,8 +77,9 @@ xmlhttp.onreadystatechange = function() {
                 doc.appendChild(newCode);
                 console.log("code loaded");
             }
+            /* in case you fucked something of above (again) */
             else{
-                console.log("something very strange is happening here :O")
+                console.log("you fucked up your code eh?, you can't lie me, i'm your console")
             }
         }
     }
