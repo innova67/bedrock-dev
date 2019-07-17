@@ -84,5 +84,5 @@ xmlhttp.onreadystatechange = function() {
         }
     }
 };
-xmlhttp.open("GET", "test.json", true);
+xmlhttp.open("GET", "createEntity.json", true);
 xmlhttp.send();
