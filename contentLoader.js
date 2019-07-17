@@ -22,8 +22,8 @@ xmlhttp.onreadystatechange = function() {
         var myObj = JSON.parse(this.responseText);
 
         /* adding page title */
-        var tit = document.getElementById("identifier")
-        tit.innerHTML = myObj.identifier;
+        var ident = document.getElementById("identifier")
+        ident.innerHTML = myObj.identifier;
 
         /* adding title */
         var tit = document.getElementById("tutorial-title")
