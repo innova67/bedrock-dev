@@ -1,10 +1,83 @@
 /* styles destinated only to the subpages generated */
 
+/* tutorials and faq style */
 .title{
     color: white;
     font-size: 3em;
+    text-transform: uppercase;
 }
 
+.subtitle{
+    color: white;
+    font-size: 2em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* faq questions and answers */
+div.container.faq{
+    display: grid;
+}
+
+.question{
+    color: var(--white);
+    margin: 10px 0px 20px;
+    background-color: var(--lightgrayTranslucent);
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.answer{
+    color: var(--white);
+    margin: 10px 0px 20px;
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.active, .question:hover {
+    background-color: var(--gray);
+}
+
+.question:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+content: "\2212";
+}
+
+
+/* top left menu navigator */
+.menu{
+    width: 100%;
+}
+.menu .navigator{
+    display: table-cell;
+}
+.navigator a,.navigator p{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 70%;
+}
+.navigator a{
+    background-color: #7777777e;
+    border-radius: 10px;
+}
+
+#toFill{
+    color: white;
+}
+
+
+/* content styles */
 .warning{
     color: red;
     background-color:rgba(133, 176, 216, 0.438);
@@ -14,10 +87,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(174, 200, 212);
     padding: 10px;
-}
-
-#toFill{
-    color: white;
 }
 
 .common-img{
