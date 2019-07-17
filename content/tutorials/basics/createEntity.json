@@ -1,0 +1,25 @@
+{
+    "indentifier": "how-to-create-a-custom-entity",
+    "title": "this is just a bad test",
+    "content":[
+            { "p":"imagine this is a first paragraph explaining how to create a custom entity" },
+
+            { "img":{ "url":"https://i.imgur.com/pkA03Yx.jpg?1", "alt": "a nice logo" }},
+
+            {"p": "what is this?? another paragraph!!"},
+
+            {"w": "warning: don't try to hug creepers"},
+
+            {"img":{ "url":"https://i.imr.com/pkA03Yx.jpg?1", "alt": "this image failed lol (it's intentional)" }},
+
+            {"code": "<pre>{<br>&#9\"miencraft:health\":{<br>&#9&#9\"value\":2<br>&#9}<br>}</pre>"},
+
+            {"w": "warning: don't try this code at home"},
+
+            {"p": "that's all folks! now you have your functional json content syntax fully automated"},
+
+            {"p": "good damn i need to sleep (T_T)"},
+
+            {"code": "<pre>p = paragraph <br>img = image <br>w = warning paragraph <br>code = a creeper in your face what do you think this tag could be? <br>stuff to add: <br>vid = youtube video viewer</pre>"}
+    ]
+}
