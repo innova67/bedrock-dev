@@ -26,13 +26,18 @@ body {
 .banner{
   background-image: url(img/main/banner.png);
   max-width: 100%;
-  padding: 50px 10px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-size: 100%;
 }
+.banner-size{
+  width: 100%; /* max width */
+  opacity: 0;  /* make it transparent */
+}
+
 footer {
   color: var(--gray);
   font-size: 80%;
@@ -42,6 +47,7 @@ footer {
 /* title style */
 .title {
   max-width: 50%;
+  position: absolute;
 }
 img.title{
   -webkit-filter: drop-shadow(5px 5px 5px var(--shadow));
@@ -124,4 +130,19 @@ img.title{
   .btn {
     padding: 20px 80px;
   }
+  /* .banner {
+    padding-bottom: 200px;
+  } */
 }
+
+/* @media screen and (width:1440px) {
+  .banner {
+    padding-bottom: 300px;
+  }
+}
+
+@media screen and (width:2560px) {
+  .banner {
+    padding-bottom: 600px;
+  }
+} */
